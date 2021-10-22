@@ -45,9 +45,10 @@ const App = () => {
             </div>
             <section className="row justify-content-center mt-5">
                 {films.map(film => (
-                    <div className="col-md-6" key={`film-card-${film.id}`}>
+                    <div className="col-3" key={`film-card-${film.id}`}>
                         <div className="card shadow-lg my-2">
                             <div className="card-body">
+                            <img src={film.movie_banner} alt="poster from movie" class="card-img-top" />
                                 <h4 className="card-title">{film.title}</h4>
                                 <p className="card-subtitle text-muted">Director: {film.director}</p>
                                 <p className="card-text">Release date: {film.release_date}</p>
@@ -58,7 +59,7 @@ const App = () => {
                 ))}
             
                 {stars.map(star => (
-                    <div class="card" style={{width:"18 em"}} key={`star-card-${star.id}`}>
+                    <div className="col-6 mt-3" key={`star-card-${star.id}`}>
                         <div className="card ">
                             <h5 class="card-title">Name: {star.name}</h5>
                             <h6 class="card-subtitle mb-2 text-muted">Age: {star.age}</h6>
